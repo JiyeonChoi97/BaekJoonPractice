@@ -1,5 +1,5 @@
 package Lv1;
-
+// lv1
 import java.util.Scanner;
 
 public class Q2588 {
@@ -8,9 +8,8 @@ public class Q2588 {
 
 		Scanner sc = new Scanner(System.in);
 		
-		int num1, num2;
-		num1 = sc.nextInt();
-		num2 = sc.nextInt();
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
 		
 		int n1 = num2/100;
 		int n2 = (num2-n1*100)/10;
