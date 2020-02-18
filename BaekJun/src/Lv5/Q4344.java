@@ -1,6 +1,6 @@
 package Lv5;
 // 평균구하기
-// n명의 평균을 소수점 셌재 자리까지 출력
+// 평균을 넘는 학생들의 퍼센트를 반올림하여 소수점 셌재 자리까지 출력
 
 import java.util.Scanner;
 
@@ -12,23 +12,27 @@ public class Q4344 {
 		do{
 			n = sc.nextInt();
 		}while(n<1||n>1000);
-		
+
 		for(int i=0;i<n;i++){
 			int arr_n = sc.nextInt();
-			int sum=0;
+			int sum=0, count=0;
+			int arr[] = new int[arr_n];
 			for(int j = 0;j<arr_n;j++){
-				int arr[] = new int[arr_n];
 				do{
 					arr[j] = sc.nextInt();
-				}while(n<1||n>100);
+				}while(n<0||n>100);
 				sum+=arr[j];
+				if(j==arr_n-1){
+					double avg = (double)sum/arr_n;
+					for(int k=0;k<arr_n;k++){
+						if(arr[k]> avg){
+							count++;
+						}
+					}
+				}
 			}
-			double avg = (double)sum/arr_n;
-			
-			
-			System.out.printf("%.03f", avg);
-			
+			System.out.printf("%.03f", ((float)count/arr_n)*100);
+			System.out.println("%");
 		}
 	}
-
 }
