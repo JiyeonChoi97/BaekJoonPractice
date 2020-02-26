@@ -1,6 +1,6 @@
 package Lv9_Math2;
 
-//M이상 N이해 소수 모두 출력
+//M이상 N이하 소수 모두 출력
 import java.util.Scanner;
 
 public class Q1929 {
