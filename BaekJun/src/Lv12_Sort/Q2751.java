@@ -1,3 +1,4 @@
+// N개의 수를 오름차순으로 정렬2
 package Lv12_Sort;
 
 import java.io.BufferedReader;
